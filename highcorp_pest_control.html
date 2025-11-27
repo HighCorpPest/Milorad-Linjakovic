@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Highcorp Pest Control | Professional Pest Management Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Highcorp Pest Control provides safe, reliable pest management for homes and businesses. Cockroaches, spiders, ants, rodents, termites and more.">
+  <style>
+    :root {
+      --primary: #0f766e;
+      --primary-dark: #115e59;
+      --secondary: #f97316;
+      --bg: #020617;
+      --bg-elevated: #020617;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --radius-lg: 1.25rem;
+      --radius-xl: 2rem;
+      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.45);
+      --transition: 200ms ease-out;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #0f172a 0, #020617 40%, #020617 100%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Header / Nav */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.75));
+      border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #22c55e, #0f766e 45%, #0f172a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 30px rgba(34, 197, 94, 0.35);
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      font-size: 0.9rem;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-text span:first-child {
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .logo-text span:last-child {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 500;
+      position: relative;
+      padding-bottom: 0.1rem;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.15rem;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(to right, var(--secondary), #22c55e);
+      border-radius: 999px;
+      transition: width var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: #f9fafb;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .pill {
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: radial-gradient(circle at top, rgba(148, 163, 184, 0.2), transparent);
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.2);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: radial-gradient(circle at 20% 0%, #22c55e, var(--primary));
+      color: #ecfdf5;
+      box-shadow: 0 14px 30px rgba(15, 118, 110, 0.55);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(15, 118, 110, 0.7);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(15, 23, 42, 0.8);
+      color: #e5e7eb;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      border-radius: 999px;
+      padding: 0.35rem 0.75rem;
+      color: #e5e7eb;
+      font-size: 0.85rem;
+      gap: 0.3rem;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 3.5rem 0 2.5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.8fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: radial-gradient(circle at top, rgba(148, 163, 184, 0.2), transparent);
+      color: var(--muted);
+      font-size: 0.78rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-badge span {
+      padding: 0.05rem 0.45rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      color: #e5e7eb;
+      font-weight: 600;
+    }
+
+    .hero-title {
+      font-size: clamp(2.3rem, 4vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title span {
+      background: linear-gradient(to right, #f97316, #22c55e, #38bdf8);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 36rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 1rem;
+    }
+
+    .hero-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .hero-meta-label {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.7rem;
+    }
+
+    .hero-meta-value {
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    /* Hero visual card */
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top left, #020617, #020617 40%, #020617 100%);
+      border-radius: var(--radius-xl);
+      padding: 1.5rem;
+      border: 1px solid rgba(148, 163, 184, 0.15);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -50%;
+      background:
+        radial-gradient(circle at 10% 0, rgba(34, 197, 94, 0.18), transparent 40%),
+        radial-gradient(circle at 90% 30%, rgba(56, 189, 248, 0.16), transparent 45%),
+        radial-gradient(circle at 50% 100%, rgba(249, 115, 22, 0.13), transparent 50%);
+      opacity: 0.8;
+      z-index: -1;
+    }
+
+    .hero-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .hero-card-title {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .hero-card-brand {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .hero-card-tag {
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      border: 1px solid rgba(34, 197, 94, 0.5);
+      color: #bbf7d0;
+      background: rgba(22, 163, 74, 0.22);
+    }
+
+    .hero-card-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 1.2rem;
+      margin-top: 0.75rem;
+    }
+
+    .hero-card-main {
+      font-size: 0.9rem;
+    }
+
+    .hero-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-top: 0.6rem;
+      font-size: 0.85rem;
+    }
+
+    .hero-list li::before {
+      content: "•";
+      color: #22c55e;
+      margin-right: 0.4rem;
+    }
+
+    .hero-card-stats {
+      font-size: 0.8rem;
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    .stat-card {
+      padding: 0.7rem 0.75rem;
+      border-radius: 0.9rem;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.85));
+    }
+
+    .stat-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+
+    .stat-value {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .hero-floating-pill {
+      position: absolute;
+      bottom: -0.4rem;
+      right: 0.5rem;
+      transform: translateY(50%);
+      padding: 0.4rem 0.7rem;
+      font-size: 0.75rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-floating-pill span {
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    /* Section base */
+    section {
+      padding: 2.5rem 0;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1.5rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .section-description {
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 30rem;
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: var(--radius-lg);
+      padding: 1.15rem 1.1rem;
+      border: 1px solid rgba(31, 41, 55, 0.9);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.45);
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background var(--transition);
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+      border-color: rgba(148, 163, 184, 0.6);
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.95));
+    }
+
+    .card-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(15, 118, 110, 0.22);
+      margin-bottom: 0.7rem;
+      font-size: 1.1rem;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .card-subtitle {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .card-list {
+      list-style: none;
+      margin-top: 0.7rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: grid;
+      gap: 0.25rem;
+    }
+
+    .card-list li::before {
+      content: "•";
+      color: #f97316;
+      margin-right: 0.4rem;
+    }
+
+    /* About / Why us */
+    .two-column {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.4fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .badge-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.8rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--muted);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .highlight-box {
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: var(--radius-lg);
+      padding: 1rem;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .highlight-box strong {
+      color: #e5e7eb;
+    }
+
+    /* Service areas */
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      font-size: 0.8rem;
+    }
+
+    .pill-tag {
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--muted);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    /* Testimonials / small trust row */
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+    }
+
+    .trust-card {
+      padding: 0.8rem;
+      border-radius: 1rem;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--muted);
+    }
+
+    .trust-name {
+      font-weight: 600;
+      color: #e5e7eb;
+      margin-top: 0.4rem;
+    }
+
+    /* Contact / CTA */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.3fr);
+      gap: 2rem;
+    }
+
+    form {
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    label {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 0.6rem 0.75rem;
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 0.85rem;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      color: #e5e7eb;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+      resize: vertical;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #6b7280;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: rgba(34, 197, 94, 0.9);
+      box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.5);
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.8rem;
+    }
+
+    .contact-details {
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .contact-details strong {
+      color: #e5e7eb;
+    }
+
+    .contact-block {
+      padding: 0.9rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    .contact-block p {
+      margin-top: 0.4rem;
+    }
+
+    .contact-list {
+      list-style: none;
+      margin-top: 0.5rem;
+      display: grid;
+      gap: 0.25rem;
+    }
+
+    .contact-list a {
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .contact-list span {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .small {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 0.4rem;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      padding: 1.4rem 0 1.6rem;
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+    }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1.1fr);
+      }
+
+      .hero-visual {
+        order: -1;
+      }
+
+      .hero {
+        padding-top: 2.6rem;
+      }
+
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .two-column,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links,
+      .nav-cta {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: inline-flex;
+      }
+
+      .hero {
+        padding-top: 2.1rem;
+      }
+
+      .services-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .trust-row {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .pill {
+        display: none;
+      }
+    }
+
+    .mobile-menu {
+      display: none;
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      background: rgba(15, 23, 42, 0.98);
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .mobile-menu-inner {
+      padding: 0.8rem 1.5rem 1.1rem;
+      display: grid;
+      gap: 0.6rem;
+      font-size: 0.92rem;
+    }
+
+    .mobile-menu-inner a {
+      color: var(--muted);
+      padding: 0.25rem 0;
+    }
+
+    .mobile-menu-inner a:hover {
+      color: #e5e7eb;
+    }
+
+    .mobile-menu-inner .btn {
+      margin-top: 0.4rem;
+      width: 100%;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#top" class="logo">
+          <div class="logo-icon">HC</div>
+          <div class="logo-text">
+            <span>Highcorp</span>
+            <span>Pest Control</span>
+          </div>
+        </a>
+
+        <div class="nav-links" aria-label="Primary">
+          <a href="#services">Services</a>
+          <a href="#about">Why Highcorp</a>
+          <a href="#areas">Service Areas</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="nav-cta">
+          <div class="pill">
+            <span class="pill-dot"></span>
+            Same-day bookings (subject to availability)
+          </div>
+          <a href="tel:0400000000" class="btn btn-primary">
+            Call now
+          </a>
+          <button class="mobile-menu-btn btn" type="button" aria-label="Open navigation" id="mobileMenuBtn">
+            Menu
+          </button>
+        </div>
+      </nav>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+          <a href="#services">Services</a>
+          <a href="#about">Why Highcorp</a>
+          <a href="#areas">Service Areas</a>
+          <a href="#contact">Contact</a>
+          <a href="tel:0400000000" class="btn btn-primary">Call 0400 000 000</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-badge">
+              Local, licensed & insured
+              <span>Residential & Commercial</span>
+            </div>
+            <h1 class="hero-title">
+              High-impact pest control.<br />
+              <span>Zero shortcuts. Zero excuses.</span>
+            </h1>
+            <p class="hero-subtitle">
+              Highcorp Pest Control provides safe, targeted treatments for homes, units and businesses.
+              Cockroaches, spiders, ants, rodents, fleas and more – handled with professional care and clear communication.
+            </p>
+
+            <div class="hero-cta">
+              <a href="#contact" class="btn btn-primary">
+                Get a free quote
+              </a>
+              <a href="#services" class="btn btn-ghost">
+                View pest services
+              </a>
+            </div>
+
+            <div class="hero-meta" aria-label="Key highlights">
+              <div class="hero-meta-item">
+                <span class="hero-meta-label">Typical response</span>
+                <span class="hero-meta-value">Within 24 hours</span>
+              </div>
+              <div class="hero-meta-item">
+                <span class="hero-meta-label">Coverage</span>
+                <span class="hero-meta-value">Greater Sydney & Western Suburbs</span>
+              </div>
+              <div class="hero-meta-item">
+                <span class="hero-meta-label">Safety</span>
+                <span class="hero-meta-value">Family, pet & hospital-aware</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-card" aria-label="Highcorp service snapshot">
+              <div class="hero-card-header">
+                <div>
+                  <div class="hero-card-title">Today's schedule</div>
+                  <div class="hero-card-brand">Highcorp Pest Control</div>
+                </div>
+                <div class="hero-card-tag">On time • On site</div>
+              </div>
+
+              <div class="hero-card-grid">
+                <div class="hero-card-main">
+                  <p><strong>Typical general service includes:</strong></p>
+                  <ul class="hero-list">
+                    <li>Internal & external spray treatment</li>
+                    <li>Gel baits for cockroaches in kitchens</li>
+                    <li>Dusting of roof voids & problem areas</li>
+                    <li>Rodent baits installed where required</li>
+                  </ul>
+                </div>
+                <div class="hero-card-stats">
+                  <div class="stat-card">
+                    <div class="stat-label">Treatment warranty</div>
+                    <div class="stat-value">Up to 6 months*</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-label">Industry compliant</div>
+                    <div class="stat-value">Licensed & insured</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-floating-pill">
+                Safety focused • <span>Hospital & healthcare experience</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Services</div>
+            <h2 class="section-title">Targeted pest solutions for real-world problems</h2>
+          </div>
+          <p class="section-description">
+            Every site is different. Highcorp combines professional-grade products and practical experience
+            to build a treatment plan that suits your property, tenants and neighbours.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="card">
+            <div class="card-icon">🏡</div>
+            <div class="card-subtitle">Residential</div>
+            <h3 class="card-title">Home pest control</h3>
+            <p>
+              Keep your family comfortable with thorough internal and external treatments tailored to your home layout,
+              pets and surrounding environment.
+            </p>
+            <ul class="card-list">
+              <li>Cockroaches, spiders, ants & silverfish</li>
+              <li>Roof void & subfloor dusting</li>
+              <li>Garages, sheds, fences & outdoor areas</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🏢</div>
+            <div class="card-subtitle">Commercial</div>
+            <h3 class="card-title">Business & strata</h3>
+            <p>
+              Professional, discrete pest management for offices, retail, medical and strata properties, with clear reporting
+              for owners and managers.
+            </p>
+            <ul class="card-list">
+              <li>Scheduled maintenance programs</li>
+              <li>Kitchen, café & food area treatments</li>
+              <li>Detailed service reports for compliance</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🐭</div>
+            <div class="card-subtitle">Rodents & more</div>
+            <h3 class="card-title">Rodent & targeted treatments</h3>
+            <p>
+              Focused solutions for the pests causing the most damage, with attention to safety, access points and long-term prevention.
+            </p>
+            <ul class="card-list">
+              <li>Rodent baiting & monitoring stations</li>
+              <li>Fleas, wasps & other problem pests</li>
+              <li>Advice on proofing & hygiene improvements</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / Why us -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Why Highcorp</div>
+            <h2 class="section-title">Local operator with safety built in</h2>
+          </div>
+          <p class="section-description">
+            Highcorp Pest Control is run by a field-experienced technician with extensive background in safety,
+            healthcare environments and real-world problem solving.
+          </p>
+        </div>
+
+        <div class="two-column">
+          <div>
+            <p>
+              You’re not just booking “a spray”. You’re engaging someone who listens, inspects properly and explains
+              what’s being done – and why.
+            </p>
+            <div class="badge-list">
+              <span class="badge">Licensed pest technician</span>
+              <span class="badge">Insured for residential & commercial work</span>
+              <span class="badge">Clear communication with owners & tenants</span>
+            </div>
+            <p>
+              Treatments are chosen to balance effectiveness with safety. That means appropriate products, correct
+              mixing rates, and careful application – especially around children, pets, and sensitive equipment.
+            </p>
+          </div>
+
+          <div class="highlight-box">
+            <strong>Safety & professionalism</strong>
+            <p>
+              Coming from a strong fire and safety background, Highcorp understands risk, documentation and duty of care.
+              When you engage Highcorp, you get:
+            </p>
+            <ul class="card-list" style="margin-top:0.6rem;">
+              <li>Clear preparation and after-care instructions</li>
+              <li>Respect for your property, tenants and neighbours</li>
+              <li>Straightforward pricing – no rushed “in and out” jobs</li>
+            </ul>
+            <p style="margin-top:0.7rem;">
+              Need urgent help? Reach out, explain the issue and location, and we’ll advise the best next step – including
+              whether it’s an emergency or can be booked for the next available day.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section id="areas">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Service Areas</div>
+            <h2 class="section-title">Covering Greater Sydney & Western Suburbs</h2>
+          </div>
+          <p class="section-description">
+            Service coverage typically includes a wide range of suburbs across Western Sydney and surrounding areas.
+            If you’re unsure, just ask – we’ll confirm if your address is within range.
+          </p>
+        </div>
+
+        <div class="two-column">
+          <div>
+            <p style="margin-bottom:0.8rem;">
+              Regular work is carried out across a broad area, including free-standing homes, townhouses, units
+              and commercial premises.
+            </p>
+            <div class="pill-row">
+              <span class="pill-tag">Penrith & surrounding suburbs</span>
+              <span class="pill-tag">Western Sydney corridor</span>
+              <span class="pill-tag">Greater Sydney (by appointment)</span>
+              <span class="pill-tag">Residential, strata & commercial sites</span>
+            </div>
+            <p style="margin-top:0.9rem;">
+              For larger sites or multiple properties, we can coordinate a treatment schedule that minimises disruption
+              to tenants, staff or patients.
+            </p>
+          </div>
+
+          <div class="trust-row">
+            <div class="trust-card">
+              “Turned up on time, explained each step and the results were obvious within days.”
+              <div class="trust-name">– Residential client</div>
+            </div>
+            <div class="trust-card">
+              “Professional reports and clear communication – easy to work with as a property manager.”
+              <div class="trust-name">– Property manager</div>
+            </div>
+            <div class="trust-card">
+              “Understands safety in sensitive environments and works around our schedule.”
+              <div class="trust-name">– Commercial client</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / Quote -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Contact</div>
+            <h2 class="section-title">Request a quote or make a booking</h2>
+          </div>
+          <p class="section-description">
+            Share a few details about your pest issue and property. You’ll receive a straightforward response with
+            options, pricing and the soonest available booking window.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div>
+            <form id="quoteForm">
+              <div class="form-row">
+                <div>
+                  <label for="name">Full name</label>
+                  <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required />
+                </div>
+                <div>
+                  <label for="phone">Phone number</label>
+                  <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="04XX XXX XXX" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div>
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" />
+                </div>
+                <div>
+                  <label for="suburb">Suburb</label>
+                  <input id="suburb" name="suburb" type="text" placeholder="e.g. Penrith" />
+                </div>
+              </div>
+
+              <div>
+                <label for="propertyType">Property type</label>
+                <select id="propertyType" name="propertyType">
+                  <option value="">Select</option>
+                  <option value="house">House</option>
+                  <option value="unit">Unit / townhouse</option>
+                  <option value="strata">Strata complex</option>
+                  <option value="commercial">Commercial / business</option>
+                  <option value="other">Other / not sure</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="pestType">Main pest problem</label>
+                <select id="pestType" name="pestType">
+                  <option value="">Select</option>
+                  <option value="cockroaches">Cockroaches</option>
+                  <option value="spiders">Spiders</option>
+                  <option value="ants">Ants</option>
+                  <option value="rodents">Rats / mice</option>
+                  <option value="fleas">Fleas</option>
+                  <option value="other">Other / multiple pests</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="message">Brief description</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us what you’re seeing, how long it’s been an issue, and any previous treatments."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                Submit enquiry
+              </button>
+              <p class="small">
+                This form does not send automatically – it will prepare your message so you can email or text it directly.
+              </p>
+            </form>
+          </div>
+
+          <div class="contact-details">
+            <div class="contact-block">
+              <strong>Direct contact</strong>
+              <p>
+                Prefer to talk to a person? Call, text or email any time and we’ll respond as soon as practical
+                between jobs.
+              </p>
+              <ul class="contact-list">
+                <li>
+                  <a href="tel:0400000000">0400 000 000</a>
+                  <span> &nbsp;— call or SMS</span>
+                </li>
+                <li>
+                  <a href="mailto:highcorp.pest.control@gmail.com">highcorp.pest.control@gmail.com</a>
+                  <span> &nbsp;— email photos & details</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="contact-block">
+              <strong>Helpful to include</strong>
+              <p>
+                When you contact Highcorp, it helps to include:
+              </p>
+              <ul class="card-list" style="margin-top:0.5rem;">
+                <li>Your suburb and property type</li>
+                <li>The main pests you’re dealing with</li>
+                <li>Any pets, young children or special requirements</li>
+              </ul>
+            </div>
+
+            <p class="small">
+              *Warranty periods depend on the type of pest, property conditions and hygiene factors. You’ll be advised
+              clearly what to expect for your specific treatment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-row">
+        <div>
+          © <span id="year"></span> Highcorp Pest Control. All rights reserved.
+        </div>
+        <div class="footer-links">
+          <a href="#top">Back to top</a>
+          <a href="#contact">Book now</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+  // Mobile menu toggle
+  const mobileBtn = document.getElementById("mobileMenuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  if (mobileBtn && mobileMenu) {
+    mobileBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("open");
+    });
+
+    mobileMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("open");
+      });
+    });
+  }
+
+  // Footer year
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+
+  // Simple helper for the form: opens mail client with pre-filled body
+  const quoteForm = document.getElementById("quoteForm");
+  if (quoteForm) {
+    quoteForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const formData = new FormData(quoteForm);
+      const name = formData.get("name") || "";
+      const phone = formData.get("phone") || "";
+      const email = formData.get("email") || "";
+      const suburb = formData.get("suburb") || "";
+      const propertyType = formData.get("propertyType") || "";
+      const pestType = formData.get("pestType") || "";
+      const message = formData.get("message") || "";
+
+      const subject = encodeURIComponent("Pest control enquiry from " + name);
+      const lines = [
+        "Name: " + name,
+        "Phone: " + phone,
+        "Email: " + email,
+        "Suburb: " + suburb,
+        "Property type: " + propertyType,
+        "Main pest issue: " + pestType,
+        "",
+        "Details:",
+        message
+      ];
+
+      const body = encodeURIComponent(lines.join("\n"));
+      const mailto = "mailto:highcorp.pest.control@gmail.com?subject=" + subject + "&body=" + body;
+      window.location.href = mailto;
+    });
+  }
+</script>
+</body>
+</html>
