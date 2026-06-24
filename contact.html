@@ -23,7 +23,7 @@
 
         .service-areas {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
             gap: 1rem;
             margin: 2rem 0;
         }
@@ -31,11 +31,17 @@
         .service-area-badge {
             background-color: #e74c3c;
             color: white;
-            padding: 1rem;
+            padding: 1.2rem;
             border-radius: 8px;
             text-align: center;
             font-weight: bold;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-area-badge:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
         }
 
         .contact-info-section {
@@ -102,18 +108,13 @@
                 <h2 style="color: #2c3e50; margin-bottom: 1.5rem;">Get in Touch</h2>
                 
                 <div class="contact-info-row">
-                    <strong>📞 Phone:</strong>
-                    <a href="tel:+61297651234">(02) 9765 1234</a>
-                </div>
-                
-                <div class="contact-info-row">
                     <strong>📱 Mobile:</strong>
-                    <a href="tel:+61450123456">0450 123 456</a>
+                    <a href="tel:+61431612167">0431 612 167</a>
                 </div>
                 
                 <div class="contact-info-row">
                     <strong>📧 Email:</strong>
-                    <a href="mailto:info@highcorppestcontrol.com.au">info@highcorppestcontrol.com.au</a>
+                    <a href="mailto:Highcorp.Pest.Control@gmail.com">Highcorp.Pest.Control@gmail.com</a>
                 </div>
                 
                 <div class="contact-info-row">
@@ -123,49 +124,50 @@
                 
                 <div class="contact-info-row">
                     <strong>📍 Address:</strong>
-                    <span>123 Main Street, Parramatta NSW 2150, Australia</span>
+                    <span>6 New Cambridge St, Fairfield West NSW 2165</span>
                 </div>
             </div>
 
             <!-- Service Areas -->
-            <h2 style="color: #2c3e50; text-align: center; margin-top: 3rem; margin-bottom: 2rem;">Service Areas</h2>
-            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem;">
-                We service the greater Sydney area including:
+            <h2 style="color: #2c3e50; text-align: center; margin-top: 3rem; margin-bottom: 1rem;">Service Areas</h2>
+            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem; font-weight: bold; color: #333;">
+                Highcorp Pest Control proudly services:
             </p>
             
             <div class="service-areas">
-                <div class="service-area-badge">🔴 Fairfield West</div>
+                <div class="service-area-badge">🌆 Sydney CBD</div>
+                <div class="service-area-badge">🏙️ Inner Sydney</div>
+                <div class="service-area-badge">🏢 Inner West Sydney</div>
+                <div class="service-area-badge">🏠 Western Sydney</div>
+                <div class="service-area-badge">🏘️ South Western Sydney</div>
                 <div class="service-area-badge">🔴 Parramatta</div>
                 <div class="service-area-badge">🔴 Liverpool</div>
+                <div class="service-area-badge">🔴 Fairfield</div>
+                <div class="service-area-badge">🔴 Blacktown</div>
                 <div class="service-area-badge">🔴 Penrith</div>
                 <div class="service-area-badge">🔴 Campbelltown</div>
-                <div class="service-area-badge">🔴 Blacktown</div>
-                <div class="service-area-badge">🔴 Rouse Hill</div>
-                <div class="service-area-badge">🔴 Castle Hill</div>
-                <div class="service-area-badge">🔴 Baulkham Hills</div>
-                <div class="service-area-badge">🔴 Hornsby</div>
-                <div class="service-area-badge">🔴 Pennant Hills</div>
-                <div class="service-area-badge">🔴 Thornleigh</div>
+                <div class="service-area-badge">🔴 Bankstown</div>
+                <div class="service-area-badge">🔴 Canterbury-Bankstown</div>
             </div>
 
             <!-- Google Maps -->
             <h2 style="color: #2c3e50; text-align: center; margin-top: 3rem; margin-bottom: 1rem;">Find Us on the Map</h2>
             
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3316.4674263726744!2d151.0036!3d-33.8201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a3c5c5c5c5d%3A0x5c5c5c5c5c5c5c5c!2sParramatta%20NSW%202150%2C%20Australia!5e0!3m2!1sen!2sau!4v1623456789" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.8484848484844!2d150.98766!3d-33.85823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b129d3e3e3e3e3f%3A0x3e3e3e3e3e3e3e3e!2s6%20New%20Cambridge%20Street%2C%20Fairfield%20West%20NSW%202165!5e0!3m2!1sen!2sau!4v1623456789" allowfullscreen="" loading="lazy"></iframe>
             </div>
 
             <!-- Google Business Profile Card -->
             <div class="contact-info-section" style="margin-top: 3rem;">
                 <h2 style="color: #2c3e50; margin-bottom: 1rem;">📍 Google Business Profile</h2>
                 <p style="margin-bottom: 1rem;">Find us on Google Maps and read customer reviews:</p>
-                <a href="https://www.google.com/maps/search/Highcorp+Pest+Control+Parramatta" class="btn btn-primary" target="_blank" style="display: inline-block;">View on Google Maps</a>
+                <a href="https://www.google.com/maps/search/Highcorp+Pest+Control+Fairfield+West" class="btn btn-primary" target="_blank" style="display: inline-block;">View on Google Maps</a>
             </div>
 
             <!-- Contact Form -->
             <div style="max-width: 600px; margin: 3rem auto 0; background-color: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
                 <h2 style="text-align: center; color: #2c3e50; margin-bottom: 2rem;">Send us a Message</h2>
-                <form action="mailto:info@highcorppestcontrol.com.au" method="POST" enctype="text/plain">
+                <form action="mailto:Highcorp.Pest.Control@gmail.com" method="POST" enctype="text/plain">
                     <div style="margin-bottom: 1.5rem;">
                         <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Full Name *</label>
                         <input type="text" id="name" name="name" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;">
@@ -205,7 +207,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Highcorp Pest Control. All rights reserved. | Phone: (02) 9765 1234 | Email: info@highcorppestcontrol.com.au</p>
+            <p>&copy; 2026 Highcorp Pest Control. All rights reserved. | Mobile: 0431 612 167 | Email: Highcorp.Pest.Control@gmail.com</p>
         </div>
     </footer>
 </body>
