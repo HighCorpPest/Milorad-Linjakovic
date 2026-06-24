@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Highcorp Pest Control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>Highcorp Pest Control</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="quote.html">Request a Quote</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="hero">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>We're here to help - reach out anytime</p>
+        </div>
+    </section>
+
+    <section class="services-preview">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                <!-- Contact Info Cards -->
+                <div class="service-card">
+                    <h3>📞 Phone</h3>
+                    <p style="font-size: 1.2rem; color: #e74c3c; font-weight: bold;">1-800-PEST-123</p>
+                    <p>Available Monday - Friday, 8am - 6pm</p>
+                    <p style="font-size: 0.9rem; color: #666;">24/7 Emergency Service Available</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>📧 Email</h3>
+                    <p style="font-size: 1.2rem; color: #e74c3c; font-weight: bold;"><a href="mailto:info@highcorppestcontrol.com" style="color: #e74c3c; text-decoration: none;">info@highcorppestcontrol.com</a></p>
+                    <p>Response within 24 business hours</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>📍 Location</h3>
+                    <p style="font-size: 1.1rem; font-weight: bold;">Highcorp Pest Control</p>
+                    <p>123 Main Street<br>Your City, State 12345</p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div style="max-width: 600px; margin: 0 auto; background-color: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                <h2 style="text-align: center; color: #2c3e50; margin-bottom: 2rem;">Send us a Message</h2>
+                <form action="mailto:info@highcorppestcontrol.com" method="POST" enctype="text/plain">
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Full Name *</label>
+                        <input type="text" id="name" name="name" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Email Address *</label>
+                        <input type="email" id="email" name="email" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="phone" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="subject" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Subject *</label>
+                        <input type="text" id="subject" name="subject" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Message *</label>
+                        <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; font-family: Arial, sans-serif;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; text-align: center; cursor: pointer;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Highcorp Pest Control. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
